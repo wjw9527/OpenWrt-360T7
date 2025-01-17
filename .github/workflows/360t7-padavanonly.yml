@@ -23,7 +23,7 @@ on:
 env:
   REPO_URL: https://github.com/wjw9527/immortalwrtARM
   REPO_BRANCH: mt7981
-  CONFIG_FILE: padavanonly_all.config
+  CONFIG_FILE: padavanonly_clash.config
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
@@ -113,7 +113,7 @@ jobs:
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
         release_tag="${{ env.FIRMWARE_VERSION }}-OpenWrt-360T7"
-        echo "padavanonly_all" >> release.txt
+        echo "padavanonly_clash" >> release.txt
         echo "release_tag=$release_tag" >> $GITHUB_OUTPUT
         echo "status=success" >> $GITHUB_OUTPUT
 
