@@ -23,7 +23,7 @@ on:
 env:
   REPO_URL: https://github.com/wjw9527/immortalwrtARM
   REPO_BRANCH: mt7981
-  CONFIG_FILE: padavanonly.config
+  CONFIG_FILE: padavanonly_all.config
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
