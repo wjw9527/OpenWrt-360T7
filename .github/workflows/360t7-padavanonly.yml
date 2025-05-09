@@ -22,7 +22,7 @@ on:
 
 env:
   REPO_URL: https://github.com/wjw9527/immortalwrtARM
-  REPO_BRANCH: mt7981
+  REPO_BRANCH: aaaa
   CONFIG_FILE: config
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
