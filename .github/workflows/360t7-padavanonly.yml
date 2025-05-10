@@ -23,7 +23,7 @@ on:
 env:
   REPO_URL: https://github.com/wjw9527/immortalwrtARM
   REPO_BRANCH: aaaa
-  CONFIG_FILE: config (1)
+  CONFIG_FILE: old_config
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
@@ -34,8 +34,8 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-    - name: 检查项目分支
-      uses: actions/checkout@main
+#    - name: 检查项目分支
+#      uses: actions/checkout@main
 
     - name: 初始化编译环境
       env:
@@ -65,8 +65,8 @@ jobs:
     - name: 更新软件源
       run: cd openwrt && ./scripts/feeds update -a
 
-    - name: 更新 golang 版本
-      run: cd openwrt && rm -rf feeds/packages/lang/golang && git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+#    - name: 更新 golang 版本
+#      run: cd openwrt && rm -rf feeds/packages/lang/golang && git clone --depth=1 https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 
     - name: 安装软件源
       run: cd openwrt && ./scripts/feeds install -a
